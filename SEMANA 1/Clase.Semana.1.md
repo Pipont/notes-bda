@@ -30,7 +30,7 @@ FLUSH PRIVILEGES;
 ```sql
 mysql -u db_user -p;
 ```
-
+Se debe de visualizar las bases de datos a las que tiene acceso el usuario
 ```sql
 SHOW DATABASES;
 ```
