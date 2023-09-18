@@ -59,7 +59,7 @@ flask run --host=0.0.0.0
 
 Con ello, se puede visualizar lo siguiente
 
-![Hola a todos](../Recursos/image.png)
+![Hola a todos](./Recursos/image.png)
 
 - - -
 
@@ -273,4 +273,4 @@ Ahora incorporando un video
 ```
 Como resultado final, se tiene
 
-![Alt text](../Recursos/ResultadoFinal.png  )
+![Alt text](./Recursos/ResultadoFinal.png )
