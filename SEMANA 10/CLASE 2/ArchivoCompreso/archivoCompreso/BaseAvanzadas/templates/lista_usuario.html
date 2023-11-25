@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hotel</title>
+  </head>
+  <!-- Inicio cuerpo -->
+  <body>
+    <center>
+      <h2>Lista de Usuarios</h2>
+    </center>
+    <div>
+    <!-- Inicio de tabla -->
+    <table>
+     <thead>
+      <tr>
+	<th>Id. Usuario</th>
+	<th>Nombre</th>
+	<th>Apellido</th>
+	<th>Identificacion</th>
+	<th>Accion</th>
+      </tr>
+     </thead>
+     <tbody>
+	 <!-- Uso de Jinja -->
+	 {% for usuario in usuarios %}
+	 <tr>
+	   <td>{{ usuario[0] }}</td>
+	   <td>{{ usuario[1] }}</td>
+	   <td>{{ usuario[2] }}</td>
+	   <td>{{ usuario[3] }}</td>
+	   <td><button type="button" onclick="location.href='{{ url_for('ver_usuarios',usuario_id = usuario[0])}}'">Ver Reservas</td>
+	 </tr>
+	 {% endfor %}
+     </tbody>
+    </table>
+  <button type="button" onClick="location.href='/'">Regresar</button>
+    </div>
+  </body>
+</html>
+

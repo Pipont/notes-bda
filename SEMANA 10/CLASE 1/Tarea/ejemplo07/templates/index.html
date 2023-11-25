@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Muestra Datos de la Base de Datos</title>
+  </head>
+ <body>
+ <!-- Cuerpo del documento  -->
+  <!-- Crea una liga o referencia a otro documento -->
+    <ul id="menu-bar">
+        <li class="active"><a href="#"><span id="active">Main</span></a></li>
+        <li><a href="/ver">Select</a>
+        </li>
+        <li><a href="#">Insert</a>
+        </li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">Delete</a></li>
+    </ul>
+  <!-- Crea una liga o referencia a otro documento -->
+ <hr>
+ <h1> ESTE ES EL DOCUMENTO INICIAL -- LLAMADO LANDING PAGE </h1>
+ <center>
+  <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="mi imagen" width="500" height="600"></img>
+ </center>
+ <!-- Fin del cuerpo del documento -->
+ </body>
+</html>

@@ -18,7 +18,7 @@ vi vista.py
 ### Actualización de datos
 Ahora, realizaremos la actualización de los datos
 
-```shell
+```py
 #### Actualización de datos
 @app.route('/editar/<string:id>')
 def editar(id):

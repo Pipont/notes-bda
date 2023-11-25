@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Muestra Datos de la Base de Datos</title>
+  </head>
+ <body>
+ <!-- Cuerpo del documento  -->
+ <!-- Creando liga a documentos -->
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/habitaciones">Habitaciones Disponibles</a>
+        </li>
+        <li><a href="/crear_reserva"><span id="active">Crear Reserva</span></a>
+        </li>
+	<li><a href="/lista_usuarios">Usuarios</a></li>
+    </ul>
+  <!-- Creando liga a documento -->
+ <!-- Inicio del cuerpo del documento -->
+ <center>
+  <h2>Inicio de Hotel</h2>
+  <hr><hr>
+  <img src="{{ url_for('static', filename='images/imagen.jpg')}}"</img> 
+ <!-- Fin del cuerpo del documento -->
+ </body>
+</html>

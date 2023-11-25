@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hotel</title>
+  </head>
+  <!-- Inicio cuerpo -->
+  <body>
+    <center>
+      <h2>Realizar Reserva</h2>
+    </center>
+    <div>
+     <form method="POST" action="/crear_reserva">
+       <!-- Datos -->
+       <div>
+	 <label for="habitacion_id">Habitacion: </label>
+	 <select id="habitacion_id" name="habitacion_id" required>
+	  <!-- Jinja para concierto -->
+	  {% for habitacion in habitaciones %}
+	  <option value="{{ habitacion[0] }}">{{ habitacion[1] }}</option>
+	  {% endfor %}
+         </select>
+       </div>
+       <div>
+	 <label for="usuario_id">Usuario: </label>
+	 <select id="usuario_id" name="usuario_id" required>
+	  <!-- Jinja para usuario -->
+	  {% for usuario in usuarios %}
+	  <option value="{{ usuario[0] }}">{{ usuario[1] }}</option>
+	  {% endfor %}
+	 </select>
+      </div>
+      <div>
+	 <label for="fecha_reserva">Fecha de inicio: </label>
+	 <input type="date" name="fecha_reserva" required>
+      </div>
+      <div>
+	  <label for="fecha_fin">Fecha de fin: </label>
+	  <input type="date" name="fecha_fin" required>
+      </div>
+      <div>
+	 <label for="costo_reserva">Costo: </label>
+	 <input type="number" name="costo_reserva" required>
+      </div>
+       <button type="submit">Realizar Reserva</button>
+       </div>
+     </form>
+     <button  onClick="location.href='/'">Regresar</button>
+    </div>
+  </body>
+</html>
+

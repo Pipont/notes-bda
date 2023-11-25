@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Muestra Datos de la Base de Datos</title>
+  </head>
+ <body>
+ <!-- Cuerpo del documento  -->
+ <!-- Creando liga a documentos -->
+    <ul id="menu-bar">
+        <li><a href="/">Main</a></li>
+	<li><a href="/ver">Select</a>
+        </li>
+	<li class="active"><a href="/insertar"><span id="active">Insert</span></a>
+        </li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">Delete</a></li>
+    </ul>
+  <!-- Creando liga a documento -->
+ <!-- Inicio del cuerpo del documento --> 
+ <center>
+  <h2>Insertar Registros</h2> 
+  <hr><hr>
+  <!-- Inicio de la forma, indicar si muestra o no los parámetros y a dónde los manda -->
+  <form method="POST" action="/insert">
+   <label for="Nombre">Marca: </label>
+   <input type="text" name="nombre" required></br>
+   <br>
+   <label for="Precio">Precio: </label>
+   <input type="number" name="pre" required></br>
+   <br>
+   <label for="Modelo">Modelo: </label>
+   <input type="text" name="m" required></br>
+   <br>
+   <br>
+   <input type="submit" value="Guardar">
+   <input type="reset" value="Limpiar">
+  </form>
+ <!-- Fin del cuerpo del documento -->
+ </body>
+</html>

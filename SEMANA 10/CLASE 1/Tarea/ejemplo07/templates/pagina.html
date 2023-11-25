@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Muestra Datos de la Base de Datos</title>
+  </head>
+ <body>
+ <!-- Cuerpo del documento  -->
+ <!-- Creando liga a documentos -->
+    <ul id="menu-bar">
+        <li><a href="/"><span id="active">Main</span></a></li>
+	<li class="active"><a href="#"><span id="active">Select</span></a>
+        </li>
+        <li><a href="/insertar">Insert</a>
+        </li>
+        <li><a href="#">Update</a></li>
+        <li><a href="#">Delete</a></li>
+    </ul>
+  <!-- Creando liga a documento -->
+ <center>
+  <h2>Lista de Autos</h2> 
+  <hr><hr>
+  <table>
+  <!-- Definicion de encabezado y columnas -->
+   <thead>
+    <tr>
+     <th>ID</th>
+     <th>Marca</th>
+     <th>Modelo</th>
+     <th>Precio</th>
+    </tr>
+   </thead>
+  <!-- Definicion del cuerpo de la tabla con dato manipulados con Jinja -->
+   <tbody>
+      {% for auto in Autos %}
+      <tr>
+	<td> {{ auto[0] }} </td>
+	<td> {{ auto[1] }} </td>
+	<td> {{ auto[2] }} </td>
+	<td> {{ auto[3] }} </td>
+      </tr>
+      {% endfor %} 
+   </tbody>
+  </table>
+ <!-- Fin del cuerpo del documento -->
+ </body>
+</html>
